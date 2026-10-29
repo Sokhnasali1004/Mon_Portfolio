@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salimata Ka — Développeuse Web | Portfolio Professionnel</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio de Salimata Ka, jeune développeuse web sénégalaise et étudiante à l'UNCHK. Spécialisée en Front-End moderne (HTML5, CSS3, JavaScript, Bootstrap) et solutions numériques innovantes.">
+  <meta name="keywords" content="Salimata Ka, Développeuse Web, Portfolio Développeur Sénégal, Front-End Developer, UNCHK, Dakar, Web Design, HTML, CSS, JavaScript, Bootstrap">
+  <meta name="author" content="Salimata Ka">
+  
+  <!-- Open Graph / Réseaux Sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Salimata Ka — Développeuse Web | Portfolio Professionnel">
+  <meta property="og:description" content="Découvrez mes projets web, mes compétences techniques et mon parcours en développement d'applications au Sénégal.">
+  <meta property="og:image" content="images/profile.jpg">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Feuille de style personnalisée -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- =========================================================================
+       1. NAVBAR
+       ========================================================================= -->
+  <nav class="navbar navbar-expand-lg navbar-custom" id="mainNavbar">
+    <div class="container">
+      <!-- Logo / Marque -->
+      <a class="navbar-brand-custom" href="#accueil" aria-label="Retour à l'accueil">
+        <span style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 40px;">Sali</span>
+        <span style="font-size: 20px;" class="brand-badge">&lt;dev/&gt;</span>
+         <!-- <a  href="https://github.com/Sokhnasali1004?tab=repositories" target="_blank" rel="noopener noreferrer">
+           <i style="font-size: 1.5rem;" class="bi bi-github"></i>
+         </a> -->
+      </a>
+
+      <!-- Bouton Hamburger Mobile -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="theme-toggle-btn me-1" id="themeToggleBtnMobile" aria-label="Changer le thème">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+        <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer le menu de navigation">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+      </div>
+
+      <!-- Menu de Navigation -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-1 my-3 my-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link nav-link-custom active" href="#accueil">Accueil</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#a-propos">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#competences">Compétences</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#projets">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#parcours">Parcours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Boutons d'action dans la navbar -->
+        <div class="d-flex align-items-center gap-3 ms-lg-4 mt-3 mt-lg-0">
+          <!-- Bouton Thème Clair/Sombre (Desktop) -->
+          <button class="theme-toggle-btn d-none d-lg-flex" id="themeToggleBtn" title="Basculer entre thème sombre et clair" aria-label="Basculer le thème">
+            <i class="bi bi-sun-fill"></i>
+          </button>
+
+          <!-- Bouton Télécharger le CV -->
+          <a href="#cvModal" class="btn-modern-primary btn-sm btn-download-cv" data-bs-toggle="modal">
+            <i class="bi bi-file-earmark-person-fill"></i>
+            <span>Mon CV</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       2. HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section" id="accueil">
+    <div class="hero-glow-bg" aria-hidden="true"></div>
+    <div class="hero-glow-bg-left" aria-hidden="true"></div>
+
+    <div class="container position-relative" style="z-index: 1;">
+      <div class="row align-items-center g-5">
+        <!-- Colonne Texte -->
+        <div class="col-lg-7">
+          <!-- Statut de disponibilité -->
+          <div class="status-pill reveal-fade">
+            <span class="status-dot"></span>
+            <a href="#contact" class="status-link">Disponible pour opportunités & stages</a>
+          </div>
+
+          <h1 class="hero-name reveal-fade">
+            SALIMATA <span class="text-gradient">KA</span>
+          </h1>
+
+          <div class="hero-role-wrapper reveal-fade">
+            <span>Je suis</span>
+            <span class="text-gradient" id="typingRole">Développeuse Web</span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description reveal-fade">
+            « Je conçois des expériences web modernes, interactives et adaptées aux besoins des utilisateurs. »
+          </p>
+
+          <div class="hero-buttons reveal-fade">
+            <a href="#projets" class="btn-modern-primary">
+              <i class="bi bi-grid-fill"></i>
+              <span>Voir mes projets</span>
+            </a>
+            <a href="#contact" class="btn-modern-secondary">
+              <i class="bi bi-envelope-paper-heart-fill"></i>
+              <span>Me contacter</span>
+            </a>
+          </div>
+
+          <!-- Liens Réseaux Sociaux -->
+          <div class="hero-socials reveal-fade">
+            <span class="hero-socials-label">Suivez-moi :</span>
+            <a href="https://www.linkedin.com/in/salimata-ka-b31056408/"target="_blank"rel="noopener noreferrer"class="btn-icon-circle"aria-label="LinkedIn de Salimata Ka">
+              <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/Sokhnasali1004" target="_blank" rel="noopener noreferrer" class="btn-icon-circle"aria-label="GitHub de Salimata Ka">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://wa.me/221789271224"target="_blank"rel="noopener noreferrer"class="btn-icon-circle"aria-label="WhatsApp de Salimata Ka">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+
+            <a href="mailto:salimataka23@gmail.com"class="btn-icon-circle"aria-label="Envoyer un email à Salimata Ka">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne Visuelle (Photo & Badges & Code Snippet) -->
+        <div class="col-lg-5">
+          <div class="hero-visual-wrapper reveal-fade">
+            <!-- Badge Flottant Haut Droit -->
+            <div class="floating-badge badge-top-right">
+              <span class="badge-icon"><i class="bi bi-code-slash"></i></span>
+              <span>&lt;developpese /&gt;</span>
+            </div>
+
+            <!-- Carte Avatar / Photo -->
+            <div class="hero-avatar-card">
+              <img src="./Images/profile.jpg" alt="Salimata Ka — Développeuse Web souriante et professionnelle" class="hero-avatar-img">
+            </div>
+
+            <!-- Badge Flottant Bas Gauche -->
+            <div class="floating-badge badge-bottom-left">
+              <span class="badge-icon"><i class="bi bi-geo-alt-fill text-danger"></i></span>
+              <span>Saint Louis, Sénégal 🇸🇳</span>
+            </div>
+
+            <!-- Mini Terminal interactif avec code JavaScript -->
+            <div class="code-terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot dot-red"></span>
+                  <span class="terminal-dot dot-yellow"></span>
+                  <span class="terminal-dot dot-green"></span>
+                </div>
+                <span class="terminal-title">salimata.config.js</span>
+                <span class="text-muted" style="font-size: 0.7rem;"><i class="bi bi-check2-all text-success"></i> verified</span>
+              </div>
+              <pre class="terminal-code mb-0">
+                <code>
+                  <span class="syntax-keyword">const</span> <span class="syntax-var">developpeuse</span> = {
+                  <span class="syntax-var">name</span>: <span class="syntax-str">"Salimata Ka"</span>,
+                  <span class="syntax-var">role</span>: <span class="syntax-str">"Web Developer"</span>,
+                  <span class="syntax-var">university</span>: <span class="syntax-str">"UNCHK Sénégal"</span>,
+                  <span class="syntax-var">speciality</span>: <span class="syntax-str">Full Stack Developer • UI/UX & Design • IA • Outils numériques • Innovation</span>,
+                  <span class="syntax-var">lovesCleanCode</span>: <span class="syntax-bool">true</span>,
+                  <span class="syntax-var">status</span>: <span class="syntax-str">"Ready to create ✨"</span>};
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. SECTION À PROPOS
+       ========================================================================= -->
+  <section class="section-padding" id="a-propos">
+    <div class="container">
+      <!-- En-tête de section -->
+      <div class="text-center mb-5 reveal-fade">
+        <span class="section-tag"><i class="bi bi-person-heart"></i> Profil & Passion</span>
+        <h2 class="section-title">À propos de moi</h2>
+        <p class="section-subtitle">Découvrez mon identité, ma vision du développement informatique et ce qui me motive chaque jour.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Présentation Bio & Qualités Clés -->
+        <div class="col-lg-7">
+          <div class="glass-card about-card-info reveal-fade h-100">
+            <h3 class="h4 fw-bold mb-3 text-primary-custom">
+              Jeune développeuse passionnée par l'innovation numérique 🚀
+            </h3>
+            <p class="about-text">
+              Je suis <strong>développeuse Full Stack</strong> passionnée par le <strong>design, les technologies numériques et l’intelligence artificielle</strong>. Je conçois et développe des solutions web modernes, intuitives et responsives, en accordant une attention particulière à l’<strong>expérience utilisateur, à l’esthétique et à l’innovation</strong>.
+            </p>
+            <p class="about-text">
+              J’aime associer <strong>créativité, développement web et IA</strong> pour transformer des idées en expériences digitales utiles, modernes et performantes. Je possède également une bonne maîtrise des <strong>outils de conception, de bureautique et des technologies numériques</strong>. Curieuse et en constante évolution, j’explore régulièrement de nouveaux outils basés sur l’IA afin d’optimiser ma façon de concevoir, développer et améliorer mes projets.
+            </p>
+
+            <!-- 5 Qualités Clés sous forme de cartes élégantes -->
+            <div class="about-highlights-grid">
+              <div class="highlight-item">
+                <i class="bi bi-lightbulb-fill highlight-icon"></i>
+                <div>
+                  <div class="highlight-title">Créativité</div>
+                  <div class="highlight-desc">Design d'interfaces captivantes & intuitives</div>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <i class="bi bi-arrow-repeat highlight-icon"></i>
+                <div>
+                  <div class="highlight-title">Apprentissage continu</div>
+                  <div class="highlight-desc">Veille tech & curiosité constante</div>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <i class="bi bi-puzzle-fill highlight-icon"></i>
+                <div>
+                  <div class="highlight-title">Résolution de problèmes</div>
+                  <div class="highlight-desc">Esprit analytique & logique rigoureuse</div>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <i class="bi bi-people-fill highlight-icon"></i>
+                <div>
+                  <div class="highlight-title">Travail en équipe</div>
+                  <div class="highlight-desc">Communication claire & écoute active</div>
+                </div>
+              </div>
+
+              <div class="highlight-item" style="grid-column: 1 / -1;">
+                <i class="bi bi-rocket-takeoff-fill highlight-icon"></i>
+                <div>
+                  <div class="highlight-title">Passion pour le numérique</div>
+                  <div class="highlight-desc">Volonté d'avoir un impact positif grâce aux technologies</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Liste rapide d'informations -->
+            <div class="quick-info-list">
+              <div class="info-pill">
+                <i class="bi bi-geo-alt"></i>
+                <span>Saint Louis, Sénégal</span>
+                
+              </div>
+              <div class="info-pill">
+                <i class="bi bi-mortarboard"></i>
+                <span>Licence Informatique (UNCHK)</span>
+              </div>
+              <div class="info-pill">
+                <i class="bi bi-translate"></i>
+                <span>Français, Wolof, Anglais (technique)</span>
+              </div>
+              <div class="info-pill">
+                <i class="bi bi-briefcase"></i>
+                <span>Stage / Alternance / Freelance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistiques et Chiffres Clés -->
+        <div class="col-lg-5">
+          <div class="stats-container reveal-fade">
+            <!-- Stat 1 -->
+            <div class="stat-box">
+              <div class="stat-icon">
+                <i class="bi bi-folder-check"></i>
+              </div>
+              <div class="stat-number" data-target="10" data-suffix="+">0</div>
+              <div class="stat-label">Projets Réalisés</div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="stat-box">
+              <div class="stat-icon">
+                <i class="bi bi-calendar2-week"></i>
+              </div>
+              <div class="stat-number" data-target="4" data-suffix="+ ans">0</div>
+              <div class="stat-label">Apprentissage & Pratique</div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="stat-box">
+              <div class="stat-icon">
+                <i class="bi bi-code-square"></i>
+              </div>
+              <div class="stat-number" data-target="500" data-suffix="+ h">0</div>
+              <div class="stat-label">Heures de Code Passionné</div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="stat-box">
+              <div class="stat-icon">
+                <i class="bi bi-award-fill"></i>
+              </div>
+              <div class="stat-number" data-target="100" data-suffix="%">0</div>
+              <div class="stat-label">Motivation & Rigueur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. SECTION COMPÉTENCES
+       ========================================================================= -->
+  <section class="section-padding bg-glass-section" id="competences">
+    <div class="container">
+      <!-- Titre de section -->
+      <div class="text-center mb-5 reveal-fade">
+        <span class="section-tag"><i class="bi bi-cpu"></i> Mon Stack Technique</span>
+        <h2 class="section-title">Mes Compétences</h2>
+        <p class="section-subtitle">Un aperçu honnête et crédible des technologies et outils que j'utilise pour donner vie à vos projets numériques.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. FRONT-END -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card skills-category-card reveal-fade">
+            <div class="category-header">
+              <div class="category-icon-wrap">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Front-End</h3>
+                <span class="text-muted-custom small">Interfaces & Expérience</span>
+              </div>
+            </div>
+
+            <!-- HTML5 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-filetype-html"></i> HTML5</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="90"></div>
+              </div>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-filetype-css"></i> CSS3 / Modern CSS</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="85"></div>
+              </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-filetype-js"></i> JavaScript (ES6+)</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="80"></div>
+              </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-bootstrap-fill"></i> Bootstrap 5</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="90"></div>
+              </div>
+            </div>
+
+            <!-- Responsive Design -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-phone"></i> Responsive Design</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="90"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. BACK-END -->
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card skills-category-card reveal-fade">
+            <div class="category-header">
+              <div class="category-icon-wrap" style="background: rgba(6, 182, 212, 0.15); color: #06b6d4;">
+                <i class="bi bi-server"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Back-End</h3>
+                <span class="text-muted-custom small">Données & Logique</span>
+              </div>
+            </div>
+
+            <!-- PHP -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-filetype-php"></i> PHP</span>
+                <span class="skill-percentage">65%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="65"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-filetype-js"></i> JavaScript Avancé</span>
+                <span class="skill-percentage">45%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="45"></div>
+              </div>
+            </div>
+
+            <!-- MySQL -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-database"></i> MySQL</span>
+                <span class="skill-percentage">65%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="65"></div>
+              </div>
+            </div>
+
+            <!-- Bases de Laravel -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-layers-fill"></i> Bases de Laravel</span>
+                <span class="skill-percentage">35%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="35"></div>
+              </div>
+            </div>
+
+            <!-- Info Box sur la progression Back-End -->
+            <div class="p-3 mt-auto rounded-3" style="background: rgba(6, 182, 212, 0.08); border: 1px dashed rgba(6, 182, 212, 0.3);">
+              <small class="d-flex align-items-center gap-2 text-muted-custom">
+                <i class="bi bi-info-circle-fill text-info"></i>
+                <span>En constante progression sur les architectures MVC et les API RESTful.</span>
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. OUTILS & ENVIRONNEMENT -->
+        <div class="col-lg-4 col-md-12">
+          <div class="glass-card skills-category-card reveal-fade">
+            <div class="category-header">
+              <div class="category-icon-wrap" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">
+                <i class="bi bi-tools"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Outils</h3>
+                <span class="text-muted-custom small">Workflow & Versioning</span>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-github"></i>Git / GitHub< / Vercel/span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="85"></div>
+              </div>
+            </div>
+             <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-hdd-network"></i>SupaBase</span>
+                <span class="skill-percentage">60%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="60"></div>
+              </div>
+            </div>
+            <!-- VS Code -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-terminal"></i> VS Code</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="95"></div>
+              </div>
+            </div>
+             <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-terminal"></i> Photoshop/Illustrator</span>
+                <span class="skill-percentage">55%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="55"></div>
+              </div>
+            </div>
+             <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-terminal"></i>Antigravity /Devin AI</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="75"></div>
+              </div>
+            </div>
+
+            <!-- XAMPP -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="bi bi-hdd-network"></i> XAMPP (Apache/MySQL)</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-level="70"></div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. SECTION PROJETS
+       ========================================================================= -->
+  <section class="section-padding" id="projets">
+    <div class="container">
+      <!-- En-tête de section -->
+      <div class="text-center mb-4 reveal-fade">
+        <span class="section-tag"><i class="bi bi-folder-check"></i> Mes Réalisations</span>
+        <h2 class="section-title">Galerie de Projets</h2>
+        <p class="section-subtitle">Chaque projet illustre une problématique concrète résolue par le code, de la billetterie culturelle à l'AgTech sénégalaise.</p>
+      </div>
+
+      <!-- Filtres dynamiques en JavaScript -->
+      <div class="project-filters reveal-fade">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="frontend">Front-End</button>
+        <button class="filter-btn" data-filter="backend">Back-End</button>
+        <button class="filter-btn" data-filter="javascript">En Cours</button>
+        <button class="filter-btn" data-filter="perso">Projets personnels</button>
+      </div>
+
+      <!-- Grille des 6 Projets -->
+      <div class="row g-4" id="projectsGrid">
+        <!-- 1. KAYPASS -->
+        <div class="col-lg-4 col-md-6 project-item" data-category="backend  ">
+          <div class="project-card reveal-fade">
+            <div class="project-img-wrapper">
+              <img style="background-image: #f8f9fa;" src="./Images/kaypass.jpeg" alt="Aperçu du projet Kaypass" class="project-img" loading="lazy">
+              <span class="project-category-badge">Billetterie Événements</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Kaypass</h3>
+              <p class="project-description">
+                Plateforme de billetterie en ligne permettant aux utilisateurs de découvrir des concerts et événements partout au sénégal et d'acheter leurs billets facilement.
+              </p>
+              <div class="project-tags">
+                <span class="tag-badge" style="background: rgba(6, 182, 212, 0.85); color: #ffffff;">Team - LINEKODE</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://kaypass.com" target="_blank" rel="noopener noreferrer" class="btn-project-view" data-project="kaypass">
+                   <i class="bi bi-eye"></i> Voir le projet
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2. Accessoires Shop -->
+         <div class="col-lg-4 col-md-6 project-item" data-category="frontend perso">
+          <div class="project-card reveal-fade">
+            <div class="project-img-wrapper">
+              <img style="background-image: #f8f9fa;" src="./Images/article10.jpg" alt="Aperçu du projet accessoire" class="project-img" loading="lazy">
+              <span class="project-category-badge">Boutique Accessoires</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Accessoires Shop</h3>
+              <p class="project-description">
+                ✨ Sublimez votre style, révélez votre élégance : chaque accessoire raconte une histoire, la vôtre. 💎💕              </p>
+              <div class="project-tags">
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">HTML5</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.855); color: #ffffff;">CSS3</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">JavaScript</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">.....</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://sokhnasali1004.github.io/Boutique-accessoire/" target="_blank" rel="noopener noreferrer" class="btn-project-view" data-project="kaypass">
+                   <i class="bi bi-eye"></i> Voir le projet
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3. Khadija_Nd -->
+        <div class="col-lg-4 col-md-6 project-item" data-category="javascript backend perso">
+          <div class="project-card reveal-fade">
+            <div class="project-img-wrapper">
+              <img style="background-image: #f8f9fa;" src="./Images/k.png" alt="Aperçu du projet Khadija_Nd" class="project-img" loading="lazy">
+              <span class="project-category-badge">Créatrice de contenu/ influenseuse</span>
+              <span style="margin-top: 40px;background: rgba(232, 188, 10, 0.85)" class="project-category-badge">En Cours</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Khadija_Nd</h3>
+              <p class="project-description">
+               Une créatrice de contenu et influenceuse, passionnée par le storytelling, l'image et le lien authentique avec une communauté engagée qui me suit au quotidien.              <div class="project-tags">
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">HTML5</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.855); color: #ffffff;">CSS3</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">JavaScript</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">PHP-SQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://sokhnasali1004.github.io/Khadija_Nd/" target="_blank" rel="noopener noreferrer" class="btn-project-view" data-project="kaypass">
+                   <i class="bi bi-eye"></i> Voir le projet
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 4. SITE Restaurant-->  
+        <div class="col-lg-4 col-md-6 project-item" data-category="backend javascript perso">
+          <div class="project-card reveal-fade">
+            <div class="project-img-wrapper">
+              <img style="background-image: #f8f9fa;" src="./Images/crevettes frites avec sauce teriyaki.jpg" alt="Aperçu du projet Khadija_Nd" class="project-img" loading="lazy">
+              <span class="project-category-badge">Restaurant </span>
+              <span style="margin-top: 40px;background: rgba(232, 188, 10, 0.85); color: #ffffff;" class="project-category-badge">En Cours</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Saveur d'Or</h3>
+              <p class="project-description">
+                Saveur d'Or, le restaurant où authenticité et raffinement se rencontrent. Découvrez une cuisine inspirée des saveurs d'ici et d'ailleurs, préparée avec passion et des ingrédients de qualité.
+              </p>         
+              <div class="project-tags">
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">HTML5</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.855); color: #ffffff;">CSS3</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">JS Simple</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://sokhnasali1004.github.io/essai_resto/" target="_blank" rel="noopener noreferrer" class="btn-project-view" data-project="kaypass">
+                   <i class="bi bi-eye"></i> Voir le projet
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 5. Panier de Khady -->
+          <div class="col-lg-4 col-md-6 project-item" data-category="backend javascript perso">
+          <div class="project-card reveal-fade">
+            <div class="project-img-wrapper">
+              <img style="background-image: #f8f9fa;" src="./Images/PK.png" alt="Aperçu du projet Khadija_Nd" class="project-img" loading="lazy">
+              <span class="project-category-badge">Boutique</span>
+              <span style="margin-top: 40px;background: rgba(232, 188, 10, 0.85); color: #ffffff;" class="project-category-badge">En Cours</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Le Panier de Khady</h3>
+              <p class="project-description">
+                 Légumes croquants, poissons nobles du jour (Thiof, Dorade), viandes découpées avec soin et épicerie fine. Gagnez du temps, nous sélectionnons le meilleur pour votre table. 
+              </p>         
+              <div class="project-tags">
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">HTML5</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.855); color: #ffffff;">CSS3</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">JS Avancé</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">S G B D</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://sokhnasali1004.github.io/panier_khady/" target="_blank" rel="noopener noreferrer" class="btn-project-view" data-project="kaypass">
+                   <i class="bi bi-eye"></i> Voir le projet
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 6. Restau -->
+        <div class="col-lg-4 col-md-6 project-item" data-category="frontend perso">
+          <div class="project-card reveal-fade">
+            <div class="project-img-wrapper">
+              <img style="background-image: #f8f9fa;" src="./Images/restau.jpeg" alt="Aperçu du projet Khadija_Nd" class="project-img" loading="lazy">
+              <span class="project-category-badge">Maquette</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Restaurant du Coin</h3>
+              <p class="project-description">
+                ✨ Bienvenue dans notre univers d’accessoires ! 💎
+                Découvrez une sélection d’articles tendance et élégants pour sublimer votre style et révéler votre personnalité. Des petits détails qui font toute la différence, pour vous sentir belle, unique et confiante au quotidien. 💖
+                Votre style, votre élégance, votre signature ! 🛍️
+              </p>         
+              <div class="project-tags">
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">HTML5</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.855); color: #ffffff;">CSS3</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">JS Simple</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://sokhnasali1004.github.io/test2/" target="_blank" rel="noopener noreferrer" class="btn-project-view" data-project="kaypass">
+                   <i class="bi bi-eye"></i> Voir le projet
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 7 DECO -->
+         <div class="col-lg-4 col-md-6 project-item" data-category="backend ">
+          <div class="project-card reveal-fade">
+            <div class="project-img-wrapper">
+              <img style="background-image: #f8f9fa;" src="./Images/img2.jpg" alt="Aperçu du projet Khadija_Nd" class="project-img" loading="lazy">
+              <span class="project-category-badge">E-Commerce</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">SenDeco</h3>
+              <p class="project-description">
+                 Du choix des accessoires aux finitions les plus délicates, chaque détail est soigneusement pensé pour transformer votre espace en un lieu chaleureux, esthétique et inspirant.
+              </p>         
+              <div class="project-tags">
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">HTML5</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.855); color: #ffffff;">CSS3</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">JS Avancé</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://sokhnasali1004.github.io/senDECO/" target="_blank" rel="noopener noreferrer" class="btn-project-view" data-project="kaypass">
+                   <i class="bi bi-eye"></i> Voir le projet
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SAS -->
+         <div class="col-lg-4 col-md-6 project-item" data-category="backend  perso">
+          <div class="project-card reveal-fade">
+            <div class="project-img-wrapper">
+              <img style="background-image: #f8f9fa;" src="./Images/DK.jpeg" alt="Aperçu du projet Khadija_Nd" class="project-img" loading="lazy">
+              <span class="project-category-badge">Pièces de seconde main</span>
+              <span style="margin-top: 40px;background: rgba(232, 188, 10, 0.85); color: #ffffff;" class="project-category-badge">En Cours</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Dëkkal</h3>
+              <p class="project-description">
+                Dëkkal réunit vendeurs et acheteurs de pièces de seconde main partout au Sénégal wax, boubous, souliers et trouvailles rares, chacune choisie pour durer.
+              </p>         
+              <div class="project-tags">
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">HTML5</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.855); color: #ffffff;">CSS3</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">JS Avancé</span>
+                <span class="tag-badge" style="background: rgba(35, 84, 206, 0.85); color: #ffffff;">PHP/mySQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://sokhnasali1004.github.io/dekkal/" target="_blank" rel="noopener noreferrer" class="btn-project-view" data-project="kaypass">
+                   <i class="bi bi-eye"></i> Voir le projet
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          </div>
+        </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SECTION PARCOURS (TIMELINE)
+       ========================================================================= -->
+<section class="section-padding bg-glass-section" id="parcours">
+  <div class="container">
+    <div class="text-center mb-5 reveal-fade">
+      <span class="section-tag"><i class="bi bi-mortarboard-fill"></i> Évolution & Expériences</span>
+      <h2 class="section-title">Mon Parcours</h2>
+      <p class="section-subtitle">Sérieuse, curieuse et motivée à l'idée d'apporter des solutions web fonctionnelles et innovantes.</p>
+    </div>
+
+    <!-- Timeline verticale -->
+    <div class="timeline-track">
+
+      <!-- Étape 1 : Licence UNCHK -->
+        <div class="timeline-item reveal-fade">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="timeline-content-card">
+          <span class="timeline-badge"><i class="bi bi-calendar-event"></i> 2023 — Présent</span>
+          <h3 class="timeline-title">Licence Informatique — Développement d'Application</h3>
+          <div class="timeline-institution">
+            <i class="bi bi-building"></i>
+            <span>Université Numérique Cheikh Hamidou Kane (UNCHK)</span>
+          </div>
+          <p class="timeline-desc">
+            Étudiante en troisième année d'informatique, spécialisée en développement web avec une attirance particuliere pour le Front-End. Je conçois des sites web interactifs, ergonomiques et axés sur l'expérience utilisateur. Possédant également des bases en Back-End que je consolide au quotidien.
+          </p>
+        </div>
+      </div>
+
+      <!-- Étape 2 : Club IDA -->
+      <div class="timeline-item reveal-fade">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="timeline-content-card">
+          <span class="timeline-badge"><i class="bi bi-award"></i> 2026 — 2025</span>
+          <h3 class="timeline-title">Formations & Certifications</h3>
+          <div class="timeline-institution">
+            <i class="bi bi-patch-check"></i>
+            <span>FORCE-N</span>
+          </div>
+          <p class="timeline-desc">
+            Attestation de réussite au parcours d'acculturation à l'entreprenariat numérique FORCE-N (2026). Attestation de réussite en Intelligence Artificielle pour tous FORCE-N (2025). Attestation de fin de formation en Développement Web (Front-End) (2025). Attestation de formation en Infographie (2025).
+          </p>
+        </div>
+      </div>
+
+      <!-- Étape 3 : Certifications FORCE-N -->
+       <div class="timeline-item reveal-fade">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="timeline-content-card">
+          <span class="timeline-badge"><i class="bi bi-calendar-event"></i> 2026 — 2025</span>
+          <h3 class="timeline-title">ENO Saint Louis</h3>
+          <div class="timeline-institution">
+            <i class="bi bi-megaphone"></i>
+            <span>Espace Numérique Ouvert </span>
+          </div>
+          <p class="timeline-desc">
+            Chargée de communication : Club IDA (Informatique & Développement d'Application) (2026 – 2025).
+          </p>
+          <p class="timeline-desc">
+           Secretaire generale du club Numerique de l'ENO de Saint Louis (2026 – 2025).
+          </p>
+        </div>
+      </div>
+
+      <!-- Étape 4 : Hackathon -->
+      <div class="timeline-item reveal-fade">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="timeline-content-card">
+          <span class="timeline-badge"><i class="bi bi-trophy"></i> 2025</span>
+          <h3 class="timeline-title">Hackathon FORCE-N</h3>
+          <div class="timeline-institution">
+            <i class="bi bi-people"></i>
+            <span>Bignona, Sénégal</span>
+          </div>
+          <p class="timeline-desc">
+            4ᵉ place nationale : 2ᵉ Edition du Hackathon FORCE-N Bignona Sénégal (2025). Attestation de participation Hackathon FORCE-N (2025).
+          </p>
+        </div>
+      </div>
+
+      <!-- Étape 5 : Support technique -->
+      <div class="timeline-item reveal-fade">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="timeline-content-card">
+          <span class="timeline-badge"><i class="bi bi-tools"></i> 2025 - 2024</span>
+          <h3 class="timeline-title">Support technique & Maintenance</h3>
+          <div class="timeline-institution">
+            <i class="bi bi-pc-display"></i>
+            <span>ENO de Saint-Louis</span>
+          </div>
+          <p class="timeline-desc">
+            Installation et configuration de logiciels (Windows) pour les étudiants à l'ENO de Saint-Louis (2025 / 2024).
+          </p>
+        </div>
+      </div>
+      <!-- Étape 6 : Baccalauréat -->
+      <div class="timeline-item reveal-fade">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="timeline-content-card">
+          <span class="timeline-badge"><i class="bi bi-check-all"></i> 2023</span>
+          <h3 class="timeline-title">Baccalauréat — Série L2</h3>
+          <div class="timeline-institution">
+            <i class="bi bi-book"></i>
+            <span>Lycée de Jeunes Filles Ameth Fall, Saint-Louis</span>
+          </div>
+          <p class="timeline-desc">
+            Baccalauréat (Série L2) Lycée de Jeunes Filles Ameth Fall, Saint-Louis (2023). Trésorière : Commission Féminine (2023).
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- =========================================================================
+       7. SECTION SERVICES
+       ========================================================================= -->
+  <section class="section-padding" id="services">
+    <div class="container">
+      <div class="text-center mb-5 reveal-fade">
+        <span class="section-tag"><i class="bi bi-gear-wide-connected"></i> Ce que je propose</span>
+        <h2 class="section-title">Mes Services</h2>
+        <p class="section-subtitle">Des prestations web soignées pour entreprises, startups, institutions et projets personnels.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1. Développement Web -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card reveal-fade">
+            <div class="service-icon-box">
+              <i class="bi bi-globe2"></i>
+            </div>
+            <h3 class="service-title">Développement Web</h3>
+            <p class="service-description">
+              Création de sites web modernes, rapides et responsive adaptés à votre marque ou votre activité professionnelle.
+            </p>
+            <ul class="service-points">
+              <li><i class="bi bi-check2"></i> Sites vitrines  et interactifs </li>
+              <li><i class="bi bi-check2"></i> 100% Responsive design</li>
+              <li><i class="bi bi-check2"></i> Optimisation SEO de base</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2. Front-End -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card reveal-fade">
+            <div class="service-icon-box">
+              <i class="bi bi-code-square"></i>
+
+            </div>
+            <h3 class="service-title">Front-End</h3>
+            <p class="service-description">
+              Création d’interfaces modernes, intuitives et interactives privilégiant l'expérience utilisateur et l'ergonomie.
+            </p>
+            <ul class="service-points">
+              <li><i class="bi bi-check2"></i> Interactions dynamiques JS</li>
+              <li><i class="bi bi-check2"></i> Micro-animations fluides</li>
+              <li><i class="bi bi-check2"></i> Composants modulaires</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Intégration Web -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card reveal-fade">
+            <div class="service-icon-box">
+              <i class="bi bi-palette"></i>
+            </div>
+            <h3 class="service-title"> Design & Prototypage</h3>
+            <p class="service-description">
+              Conception de maquettes, de visuels et d’identités graphiques modernes.
+            </p>
+            <ul class="service-points">
+              <li><i class="bi bi-check2"></i> Maquettes et prototypes d’interfaces avec Figma</li>
+              <li><i class="bi bi-check2"></i> Visuels, affiches et logos avec Photoshop, Illustrator et Canva</li>
+              <li><i class="bi bi-check2"></i> Design cohérent, lisible et adapté à l’identité de chaque projet</li>
+            </ul>
+           
+
+
+
+          </div>
+        </div>
+
+        <!-- 4. Maintenance & Amélioration -->
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card reveal-fade">
+            <div class="service-icon-box">
+              <i class="bi bi-wrench-adjustable"></i>
+            </div>
+            <h3 class="service-title">Maintenance & Amélioration</h3>
+            <p class="service-description">
+              Amélioration, correction de bugs, adaptation responsive et optimisation des performances de vos sites existants.
+            </p>
+            <ul class="service-points">
+              <li><i class="bi bi-check2"></i> Correction de bugs visuels</li>
+              <li><i class="bi bi-check2"></i> Vitesse de chargement</li>
+              <li><i class="bi bi-check2"></i> Mises à jour techniques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. SECTION « POURQUOI MOI ? »
+       ========================================================================= -->
+  <section class="section-padding bg-glass-section" id="pourquoi-moi">
+    <div class="container">
+      <div class="text-center mb-5 reveal-fade">
+        <span class="section-tag"><i class="bi bi-stars"></i> Valeur Ajoutée</span>
+        <h2 class="section-title">Pourquoi travailler avec moi ?</h2>
+        <p class="section-subtitle">Au-delà du code, je m'investis pleinement pour faire de chaque collaboration un franc succès.</p>
+      </div>
+
+      <!-- Bannière avec la citation forte -->
+      <div class="why-quote-banner reveal-fade">
+        <i class="bi bi-quote fs-1 text-primary-custom mb-2 d-block"></i>
+        <blockquote class="why-quote-text">
+          « Je ne me contente pas de créer des sites, je transforme des idées en expériences numériques. »
+        </blockquote>
+        <div class="why-quote-author"> Sali_DEV</div>
+      </div>
+
+      <!-- Grille des atouts -->
+      <div class="row g-4">
+        <!-- Atout 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="why-value-card reveal-fade">
+            <div class="why-value-icon">
+              <i class="bi bi-heart-pulse"></i>
+            </div>
+            <div>
+              <h3 class="why-value-title">Approche orientée utilisateur</h3>
+              <p class="why-value-desc">Chaque interface est pensée pour offrir une navigation claire, fluide et accessible à tous les profils d'utilisateurs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atout 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="why-value-card reveal-fade">
+            <div class="why-value-icon">
+              <i class="bi bi-palette"></i>
+            </div>
+            <div>
+              <h3 class="why-value-title">Créativité & Sens du détail</h3>
+              <p class="why-value-desc">Un souci permanent d'esthétisme, de contrastes harmonieux et d'équilibre typographique pour valoriser votre image.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atout 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="why-value-card reveal-fade">
+            <div class="why-value-icon">
+              <i class="bi bi-lightning-charge"></i>
+            </div>
+            <div>
+              <h3 class="why-value-title">Motivation & Rigueur</h3>
+              <p class="why-value-desc">Une énergie inépuisable et un engagement total pour livrer des résultats soignés à la hauteur des exigences.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atout 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="why-value-card reveal-fade">
+            <div class="why-value-icon">
+              <i class="bi bi-book"></i>
+            </div>
+            <div>
+              <h3 class="why-value-title">Apprentissage continu</h3>
+              <p class="why-value-desc">Curieuse des tendances web et des meilleures pratiques internationales, j'adopte rapidement les outils d'avenir.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atout 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="why-value-card reveal-fade">
+            <div class="why-value-icon">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <div>
+              <h3 class="why-value-title">Respect des délais</h3>
+              <p class="why-value-desc">Organisation structurée des tâches pour garantir des livraisons ponctuelles et sans mauvaises surprises.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atout 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="why-value-card reveal-fade">
+            <div class="why-value-icon">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <div>
+              <h3 class="why-value-title">Passion pour les technologies</h3>
+              <p class="why-value-desc">Convaincue que le numérique est un levier d'émancipation et de développement majeur pour l'Afrique et le monde.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. SECTION CONTACT
+       ========================================================================= -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="text-center mb-5 reveal-fade">
+        <span class="section-tag"><i class="bi bi-chat-dots-fill"></i> Parlons de votre projet</span>
+        <h2 class="section-title">Contactez-moi</h2>
+        <p class="section-subtitle">Vous avez un projet en tête, une proposition de stage ou d'opportunité professionnelle ? Écrivez-moi !</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Informations Directes de Contact -->
+        <div class="col-lg-5">
+          <div class="glass-card contact-info-card reveal-fade">
+            <div>
+              <h3 class="h4 fw-bold mb-3">Restons en contact</h3>
+              <p class="text-muted-custom mb-4">
+                Je réponds généralement en moins de 24 heures. N'hésitez pas à me contacter par email ou via mes réseaux sociaux professionnels.
+              </p>
+
+              <!-- Email -->
+              <a href="mailto:salimataka23@gmail.com" class="contact-direct-item">
+                <div class="contact-icon">
+                  <i class="bi bi-envelope-at"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">salimataka23@gmail.com</div>
+                </div>
+              </a>
+
+              <!-- Téléphone -->
+              <a href="tel:+221 78 927 12 24" class="contact-direct-item">
+                <div class="contact-icon">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Téléphone / WhatsApp</div>
+                  <div class="contact-value">+221 78 927 12 24</div>
+                </div>
+              </a>
+
+              <!-- Localisation -->
+              <div class="contact-direct-item">
+                <div class="contact-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Localisation</div>
+                  <div class="contact-value">Saint Louis, Sénégal 🇸🇳</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Réseaux Sociaux -->
+            <div class="mt-4 pt-3 border-top border-secondary-subtle">
+              <span class="d-block mb-3 small fw-bold text-uppercase text-muted">Profils professionnels :</span>
+              <div class="d-flex gap-2">
+                <a href="https://www.linkedin.com/in/salimata-ka-b31056408/"target="_blank"rel="noopener noreferrer"class="btn-icon-circle"aria-label="LinkedIn de Salimata Ka">
+                 <i class="bi bi-linkedin"></i>
+                </a>
+               <a href="https://github.com/Sokhnasali1004" target="_blank" rel="noopener noreferrer" class="btn-icon-circle"aria-label="GitHub de Salimata Ka">
+              <i class="bi bi-github"></i>
+            </a>
+             <a href="mailto:salimataka23@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-icon-circle"aria-label="Email de Salimata Ka">
+              <i class="bi bi-envelope"></i>
+            </a>
+                <a href="https://wa.me/221789271224" target="_blank" rel="noopener noreferrer" class="btn-icon-circle" aria-label="WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Formulaire de Contact avec Validation JS -->
+        <div class="col-lg-7">
+          <div class="glass-card contact-form-card reveal-fade">
+            <h3 class="h4 fw-bold mb-4">Envoyez-moi un message</h3>
+
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <!-- Nom -->
+                <div class="col-md-6">
+                  <label for="name" class="form-label-custom">
+                    <i class="bi bi-person"></i> Votre nom complet *
+                  </label>
+                  <input type="text" class="form-control-custom" id="name" name="name" placeholder="Ex. Aminata Diallo" required minlength="2">
+                  <div class="invalid-feedback-custom">Veuillez renseigner votre nom (au moins 2 caractères).</div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="email" class="form-label-custom">
+                    <i class="bi bi-envelope"></i> Votre adresse email *
+                  </label>
+                  <input type="email" class="form-control-custom" id="email" name="email" name="email" placeholder="nom@exemple.com" required>
+                  <div class="invalid-feedback-custom">Veuillez entrer une adresse email valide.</div>
+                </div>
+
+                <!-- Sujet -->
+                <div class="col-12">
+                  <label for="subject" class="form-label-custom">
+                    <i class="bi bi-chat-left-text"></i> Sujet de votre message *
+                  </label>
+                  <input type="text" class="form-control-custom" id="subject" name="subject" placeholder="Ex. Proposition de stage / Projet web" required minlength="3">
+                  <div class="invalid-feedback-custom">Veuillez spécifier le sujet de votre message.</div>
+                </div>
+
+                <!-- Message -->
+                <div class="col-12">
+                  <label for="message" class="form-label-custom">
+                    <i class="bi bi-textarea-resize"></i> Votre message *
+                  </label>
+                  <textarea class="form-control-custom" id="message" rows="5" name="message" placeholder="Décrivez votre besoin, projet ou question en quelques lignes..." required minlength="10"></textarea>
+                  <div class="invalid-feedback-custom">Veuillez rédiger un message d'au moins 10 caractères.</div>
+                </div>
+
+                <!-- Bouton Envoyer -->
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn-modern-primary w-100 py-3" id="submitBtn">
+                    <i class="bi bi-send-fill"></i>
+                    <span>Envoyer mon message</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notification Toast de confirmation -->
+  <div class="toast-custom" id="contactToast" role="alert" aria-live="assertive" aria-atomic="true">
+    <i class="bi bi-check-circle-fill fs-4"></i>
+    <span id="toastMessage">Votre message a été transmis avec succès !</span>
+  </div>
+
+  <!-- =========================================================================
+       10. FOOTER
+       ========================================================================= -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Colonne Marque -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            Salimata Ka <span class="text-primary-custom" style="font-size: 1rem; font-weight: normal;">— Développeuse Web</span>
+          </div>
+          <p class="footer-tagline">
+            « Construisons ensemble des expériences numériques modernes. »
+          </p>
+          <div class="footer-socials mt-3">
+            <a href="https://www.linkedin.com/in/salimata-ka-b31056408/"target="_blank"rel="noopener noreferrer"class="btn-icon-circle"aria-label="LinkedIn de Salimata Ka">
+                 <i class="bi bi-linkedin"></i>
+                </a>
+            <a href="https://github.com/Sokhnasali1004" target="_blank" rel="noopener noreferrer" class="btn-icon-circle"aria-label="GitHub de Salimata Ka">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="mailto:salimataka23@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-icon-circle" aria-label="Email">
+              <i class="bi bi-envelope-fill"></i> 
+            </a>              
+
+             <a href="https://wa.me/221789271224" target="_blank" rel="noopener noreferrer" class="btn-icon-circle" aria-label="WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+          </div>
+        </div>
+
+        <!-- Navigation Rapide -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-title">Navigation Rapide</div>
+          <ul class="footer-nav-list">
+            <li><a href="#accueil"><i class="bi bi-chevron-right small"></i> Accueil</a></li>
+            <li><a href="#a-propos"><i class="bi bi-chevron-right small"></i> À propos de moi</a></li>
+            <li><a href="#competences"><i class="bi bi-chevron-right small"></i> Compétences techniques</a></li>
+            <li><a href="#projets"><i class="bi bi-chevron-right small"></i> Projets récents</a></li>
+            <li><a href="#parcours"><i class="bi bi-chevron-right small"></i> Parcours & Formation</a></li>
+            <li><a href="#contact"><i class="bi bi-chevron-right small"></i> Me contacter</a></li>
+          </ul>
+        </div>
+
+        <!-- Mentions & Disponibilité -->
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-title">Disponibilité</div>
+          <p class="text-muted-custom small mb-3">
+            À la recherche d'opportunités enrichissantes, de stages et de projets collaboratifs pour mettre mes compétences au service de l'impact numérique.
+          </p>
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3);">
+            <span class="status-dot"></span>
+            <small class="text-success fw-bold">Saint-Louis, Sénégal </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <!-- Bas de page -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Salimata Ka — Tous droits réservés.
+        </div>
+        <div>
+          Conçu avec passion & rigueur technique à Saint-Louis 🇸🇳
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bouton Flottant Retour en Haut -->
+  <button class="back-to-top-btn" id="backToTopBtn" title="Retourner en haut de page" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- =========================================================================
+       MODALE DE DÉTAIL DES PROJETS (INTERACTIVE)
+       ========================================================================= -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="modalProjectTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom">
+          <div>
+            <span class="badge bg-primary-subtle text-primary mb-1" id="modalProjectCategory">Projet</span>
+            <h3 class="modal-title h5 fw-bold" id="modalProjectTitle">Titre du Projet</h3>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body modal-body-custom">
+          <img src="" alt="Aperçu du projet" class="modal-preview-img" id="modalProjectImage">
+          
+          <h4 class="h6 fw-bold mb-2">Présentation générale :</h4>
+          <p class="text-muted-custom" id="modalProjectDescription"></p>
+
+          <h4 class="h6 fw-bold mt-4 mb-2">Fonctionnalités clés :</h4>
+          <ul class="feature-list" id="modalProjectFeatures"></ul>
+
+          <h4 class="h6 fw-bold mt-4 mb-2">Technologies utilisées :</h4>
+          <div class="project-tags" id="modalProjectTags"></div>
+        </div>
+        <div class="modal-footer modal-footer-custom">
+          <button type="button" class="btn-modern-secondary btn-sm" data-bs-dismiss="modal">Fermer</button>
+          <a href="#" class="btn-modern-secondary btn-sm" id="modalProjectCode" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-github"></i> Code GitHub
+          </a>
+          <a href="#" class="btn-modern-primary btn-sm" id="modalProjectLive">
+            <i class="bi bi-box-arrow-up-right"></i> Tester la démo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODALE DU CURRICULUM VITAE (CV)
+       ========================================================================= -->
+  
+<!-- =========================================================================
+     MODALE DU CURRICULUM VITAE — SALIMATA KA
+     ========================================================================= -->
+<div class="modal fade" id="cvModal" tabindex="-1"
+     aria-labelledby="cvModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content modal-content-custom">
+
+      <!-- EN-TÊTE -->
+      <div class="modal-header modal-header-custom d-flex justify-content-between align-items-center">
+        <div>
+          <h3 class="modal-title h5 fw-bold" id="cvModalLabel">
+            Curriculum Vitae — Salimata Ka
+          </h3>
+          <span class="text-muted small">
+            Informatique & Développement Web | Saint-Louis, Sénégal
+          </span>
+        </div>
+
+        <button type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Fermer"></button>
+      </div>
+
+      <!-- CONTENU DU CV -->
+      <div class="modal-body modal-body-custom" id="printableCvContent">
+
+        <!-- PROFIL -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between
+                    p-3 rounded-3 mb-4"
+             style="background: rgba(99, 102, 241, 0.1);
+                    border: 1px solid rgba(99, 102, 241, 0.2);">
+
+          <div>
+            <h2 class="h4 fw-bold mb-1">Salimata KA</h2>
+
+            <div class="text-gradient fw-bold mb-2">
+              Étudiante en Informatique & Développeuse Web
+            </div>
+
+            <div class="small text-muted-custom">
+              <div>
+                <i class="bi bi-geo-alt me-1"></i>
+                Saint-Louis, Sénégal
+              </div>
+
+              <div>
+                <i class="bi bi-envelope me-1"></i>
+                <a href="mailto:Salimataka23@gmail.com">
+                  Salimataka23@gmail.com
+                </a>
+              </div>
+
+              <div>
+                <i class="bi bi-telephone me-1"></i>
+                <a href="tel:+221789271224">+221 78 927 12 24</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3 mt-sm-0">
+            <span class="badge bg-primary-subtle text-primary p-2">
+              Développement Web
+            </span>
+          </div>
+        </div>
+
+        <!-- PROFIL PROFESSIONNEL -->
+        <section class="mb-4">
+          <h4 class="h6 text-uppercase fw-bold text-primary mb-3">
+            <i class="bi bi-person-circle me-2"></i>
+            Profil professionnel
+          </h4>
+
+          <p class="small text-muted-custom mb-0">
+            Étudiante en troisième année d’informatique, spécialisée en
+            développement web avec un attrait particulier pour le Front-End.
+            Je conçois des sites web interactifs, ergonomiques et axés sur
+            l’expérience utilisateur. Possédant également des bases en
+            Back-End que je consolide au quotidien, je suis sérieuse,
+            curieuse et motivée à l’idée d’apporter des solutions web
+            fonctionnelles et innovantes.
+          </p>
+        </section>
+
+        <!-- COMPÉTENCES TECHNIQUES -->
+        <section class="mb-4">
+          <h4 class="h6 text-uppercase fw-bold text-primary mb-3">
+            <i class="bi bi-code-slash me-2"></i>
+            Compétences techniques
+          </h4>
+
+          <div class="row g-3 small">
+
+            <div class="col-md-6">
+              <div class="p-3 rounded-3 h-100 border">
+                <strong>
+                  <i class="bi bi-window me-2 text-primary"></i>
+                  Front-End
+                </strong>
+                <p class="text-muted-custom mt-2 mb-0">
+                  HTML5, CSS3, JavaScript, Responsive Design
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="p-3 rounded-3 h-100 border">
+                <strong>
+                  <i class="bi bi-database me-2 text-primary"></i>
+                  Back-End & Bases de données
+                </strong>
+                <p class="text-muted-custom mt-2 mb-0">
+                  PHP, SQL, MySQL
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="p-3 rounded-3 h-100 border">
+                <strong>
+                  <i class="bi bi-layers me-2 text-primary"></i>
+                  Frameworks & CMS
+                </strong>
+                <p class="text-muted-custom mt-2 mb-0">
+                  Bootstrap, WordPress
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="p-3 rounded-3 h-100 border">
+                <strong>
+                  <i class="bi bi-palette me-2 text-primary"></i>
+                  Design & Prototypage
+                </strong>
+                <p class="text-muted-custom mt-2 mb-0">
+                  Figma, Photoshop, Illustrator, Canva
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="p-3 rounded-3 border">
+                <strong>
+                  <i class="bi bi-tools me-2 text-primary"></i>
+                  Outils numériques & Gestion
+                </strong>
+                <p class="text-muted-custom mt-2 mb-0">
+                  Git, GitHub, Microsoft Word, Excel, PowerPoint,
+                  Google Workspace et outils d’intelligence artificielle.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- EXPÉRIENCES ET ENGAGEMENTS -->
+        <section class="mb-4">
+          <h4 class="h6 text-uppercase fw-bold text-primary mb-3">
+            <i class="bi bi-briefcase me-2"></i>
+            Expériences & engagements
+          </h4>
+
+          <div class="border-start border-2 border-primary ps-3 mb-3">
+            <div class="fw-bold">
+              Chargée de communication — Club IDA
+            </div>
+            <div class="text-info small mb-1">
+              2025 – 2026
+            </div>
+            <p class="small text-muted-custom mb-0">
+              Participation à la communication et aux activités du club
+              Informatique & Développement d’Application.
+            </p>
+          </div>
+
+          <div class="border-start border-2 border-primary ps-3 mb-3">
+            <div class="fw-bold">
+              4ᵉ place nationale — Hackathon FORCE-N
+            </div>
+            <div class="text-info small mb-1">
+              2ᵉ édition | Bignona, Sénégal | 2025
+            </div>
+            <p class="small text-muted-custom mb-0">
+              Participation à un hackathon national consacré à l’innovation
+              et aux solutions numériques.
+            </p>
+          </div>
+
+          <div class="border-start border-2 border-primary ps-3 mb-3">
+            <div class="fw-bold">
+              Développement de sites web interactifs
+            </div>
+            <div class="text-info small mb-1">
+              Projets académiques et personnels — En cours
+            </div>
+            <p class="small text-muted-custom mb-0">
+              Conception et réalisation de projets web mettant en pratique
+              les compétences acquises en développement.
+            </p>
+          </div>
+
+          <div class="border-start border-2 border-primary ps-3 mb-3">
+            <div class="fw-bold">
+              Support technique & maintenance informatique
+            </div>
+            <div class="text-info small mb-1">
+              ENO de Saint-Louis | 2024
+            </div>
+            <p class="small text-muted-custom mb-0">
+              Installation et configuration de logiciels sous Windows
+              pour les étudiants.
+            </p>
+          </div>
+
+          <div class="border-start border-2 border-primary ps-3 mb-3">
+            <div class="fw-bold">Participation événementielle — FIAN</div>
+            <div class="text-info small mb-1">2025</div>
+            <p class="small text-muted-custom mb-0">
+              Participation à la Foire internationale agricole du Nord.
+            </p>
+          </div>
+
+          <div class="border-start border-2 border-primary ps-3">
+            <div class="fw-bold">Trésorière — Commission féminine</div>
+            <div class="text-info small mb-1">2023</div>
+          </div>
+        </section>
+
+        <!-- FORMATIONS ET CERTIFICATIONS -->
+        <section class="mb-4">
+          <h4 class="h6 text-uppercase fw-bold text-primary mb-3">
+            <i class="bi bi-mortarboard me-2"></i>
+            Formations & certifications
+          </h4>
+
+          <div class="border-start border-2 border-primary ps-3">
+            <div class="mb-3">
+              <div class="fw-bold small">
+                Parcours d’acculturation à l’entrepreneuriat numérique
+              </div>
+              <div class="text-info small">
+                FORCE-N | 2026
+              </div>
+              <div class="text-muted-custom small">
+                Attestation de réussite
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-bold small">
+                Intelligence artificielle pour tous
+              </div>
+              <div class="text-info small">
+                FORCE-N | 2025
+              </div>
+              <div class="text-muted-custom small">
+                Attestation de réussite
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-bold small">
+                Développement Web — Front-End
+              </div>
+              <div class="text-info small">
+                2025
+              </div>
+              <div class="text-muted-custom small">
+                Attestation de fin de formation
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-bold small">Infographie</div>
+              <div class="text-info small">2025</div>
+              <div class="text-muted-custom small">
+                Attestation de formation
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-bold small">
+                Participation au Hackathon FORCE-N
+              </div>
+              <div class="text-info small">2025</div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-bold small">
+                Techniques de gestion du stress et prise de parole en public
+              </div>
+              <div class="text-info small">2024</div>
+              <div class="text-muted-custom small">
+                Attestation de formation
+              </div>
+            </div>
+
+            <div>
+              <div class="fw-bold small">
+                Baccalauréat — Série L2
+              </div>
+              <div class="text-info small">
+                Lycée de Jeunes Filles Ameth Fall, Saint-Louis | 2023
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LANGUES ET INFORMATIONS -->
+        <section>
+          <h4 class="h6 text-uppercase fw-bold text-primary mb-3">
+            <i class="bi bi-globe me-2"></i>
+            Langues & informations complémentaires
+          </h4>
+
+          <ul class="small text-muted-custom ps-3 mb-0">
+            <li class="mb-2">
+              <strong>Pulaar :</strong> langue maternelle
+            </li>
+            <li class="mb-2">
+              <strong>Français :</strong> courant
+            </li>
+            <li class="mb-2">
+              <strong>Wolof :</strong> bon niveau
+            </li>
+            <li class="mb-2">
+              <strong>Anglais :</strong> intermédiaire
+            </li>
+            <li>
+              <strong>Permis de conduire :</strong> catégorie B
+            </li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- PIED DE PAGE -->
+      <div class="modal-footer modal-footer-custom">
+
+        <button type="button"
+                class="btn-modern-secondary btn-sm"
+                data-bs-dismiss="modal">
+          Fermer
+        </button>
+
+        <a href="./assets/Mon_CV.pdf"
+           download="CV-Salimata-KA.pdf"
+           class="btn-modern-primary btn-sm">
+          <i class="bi bi-download me-1"></i>
+          Télécharger le CV (PDF)
+        </a>
+
+        <button type="button"
+                class="btn-modern-secondary btn-sm"
+                id="printCvBtn">
+          <i class="bi bi-printer-fill me-1"></i>
+          Imprimer
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Bootstrap 5 Bundle JS (inclut Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script Principal -->
+  <script src="js/script.js"></script>
+</body>
+</html>
