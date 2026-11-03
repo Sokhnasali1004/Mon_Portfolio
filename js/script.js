@@ -1,40 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
   // --------------------------------------------------------------------------
-  // 1. GESTION DU THÈME (SOMBRE / CLAIR)
+  // 1. GESTION DU THÈME (SOMBRE / CLAIR) - DESKTOP & MOBILE
   // --------------------------------------------------------------------------
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  const currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  let currentTheme = 'dark';
+  try {
+    currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  } catch (e) {
+    currentTheme = 'dark';
+  }
 
   // Appliquer le thème initial
   document.documentElement.setAttribute('data-theme', currentTheme);
-  updateThemeIcon(currentTheme);
-
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const activeTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
-      
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('portfolio-theme', newTheme);
-      updateThemeIcon(newTheme);
-    });
+  document.documentElement.setAttribute('data-bs-theme', currentTheme);
+  if (typeof updateAllThemeButtons === 'function') {
+    updateAllThemeButtons(currentTheme);
+  } else {
+    updateThemeIcon(currentTheme);
   }
 
+  // Écouter les clics sur tous les boutons de thème (desktop et mobile)
+  const allThemeButtons = document.querySelectorAll('.theme-toggle-btn, .btn-theme-mobile-menu');
+  allThemeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Si la fonction globale toggleTheme existe, elle gère déjà le basculement
+      if (typeof toggleTheme === 'function') {
+        // Déjà géré par onclick si présent, sinon appeler toggleTheme
+        if (!btn.hasAttribute('onclick')) {
+          toggleTheme();
+        }
+      } else {
+        const activeTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        document.documentElement.setAttribute('data-bs-theme', newTheme);
+        try {
+          localStorage.setItem('portfolio-theme', newTheme);
+        } catch (e) {}
+        updateThemeIcon(newTheme);
+      }
+    });
+  });
+
   function updateThemeIcon(theme) {
-    if (!themeToggleBtn) return;
-    const icon = themeToggleBtn.querySelector('i');
-    if (!icon) return;
-    
-    if (theme === 'light') {
-      icon.className = 'bi bi-moon-stars-fill';
-      themeToggleBtn.setAttribute('title', 'Activer le mode sombre');
-      themeToggleBtn.setAttribute('aria-label', 'Activer le mode sombre');
-    } else {
-      icon.className = 'bi bi-sun-fill';
-      themeToggleBtn.setAttribute('title', 'Activer le mode clair');
-      themeToggleBtn.setAttribute('aria-label', 'Activer le mode clair');
-    }
+    const isLight = theme === 'light';
+    const iconClass = isLight ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+    const titleText = isLight ? 'Activer le mode sombre' : 'Activer le mode clair';
+    const labelText = isLight ? 'Mode Sombre' : 'Mode Clair';
+
+    allThemeButtons.forEach(btn => {
+      const icon = btn.querySelector('i');
+      if (icon) {
+        icon.className = iconClass + (btn.classList.contains('btn-theme-mobile-menu') ? ' me-2' : '');
+      }
+      const label = btn.querySelector('.theme-toggle-label');
+      if (label) {
+        label.textContent = labelText;
+      }
+      btn.setAttribute('title', titleText);
+      btn.setAttribute('aria-label', titleText);
+    });
   }
 
   // --------------------------------------------------------------------------
@@ -210,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.btn-project-view').forEach(button => {
     button.addEventListener('click', (e) => {
       const projectId = e.currentTarget.getAttribute('data-project');
-      const project = projectsData[projectId];
+      const project = (typeof projectsData !== 'undefined' && projectsData) ? projectsData[projectId] : null;
 
       if (project && projectModal) {
         document.getElementById('modalProjectTitle').textContent = project.title;

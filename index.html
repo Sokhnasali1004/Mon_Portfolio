@@ -30,6 +30,78 @@
   
   <!-- Feuille de style personnalisée -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Script d'initialisation et gestion du thème (Sombre / Clair) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('portfolio-theme');
+        var theme = savedTheme ? savedTheme : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+    })();
+
+    function toggleTheme() {
+      try {
+        var current = document.documentElement.getAttribute('data-theme') || 'dark';
+        var newTheme = current === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        document.documentElement.setAttribute('data-bs-theme', newTheme);
+        if (document.body) {
+          document.body.setAttribute('data-theme', newTheme);
+          document.body.setAttribute('data-bs-theme', newTheme);
+        }
+
+        try {
+          localStorage.setItem('portfolio-theme', newTheme);
+        } catch (e) {}
+
+        updateAllThemeButtons(newTheme);
+      } catch (err) {
+        console.error('Erreur basculement thème:', err);
+      }
+    }
+
+    function updateAllThemeButtons(theme) {
+      var isLight = theme === 'light';
+      var iconClass = isLight ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+      var titleText = isLight ? 'Activer le mode sombre' : 'Activer le mode clair';
+      var labelText = isLight ? 'Mode Sombre' : 'Mode Clair';
+
+      var roundBtns = document.querySelectorAll('.theme-toggle-btn');
+      for (var i = 0; i < roundBtns.length; i++) {
+        var icon = roundBtns[i].querySelector('i');
+        if (icon) icon.className = iconClass;
+        roundBtns[i].setAttribute('title', titleText);
+        roundBtns[i].setAttribute('aria-label', titleText);
+      }
+
+      var menuBtns = document.querySelectorAll('.btn-theme-mobile-menu');
+      for (var j = 0; j < menuBtns.length; j++) {
+        var mIcon = menuBtns[j].querySelector('i');
+        if (mIcon) mIcon.className = iconClass + ' me-2';
+        var mLabel = menuBtns[j].querySelector('.theme-toggle-label');
+        if (mLabel) mLabel.textContent = labelText;
+        menuBtns[j].setAttribute('title', titleText);
+        menuBtns[j].setAttribute('aria-label', titleText);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        var t = document.documentElement.getAttribute('data-theme') || 'dark';
+        updateAllThemeButtons(t);
+      });
+    } else {
+      var t = document.documentElement.getAttribute('data-theme') || 'dark';
+      updateAllThemeButtons(t);
+    }
+  </script>
 </head>
 <body>
   <!-- =========================================================================
@@ -48,7 +120,7 @@
 
       <!-- Bouton Hamburger Mobile -->
       <div class="d-flex align-items-center gap-2 d-lg-none">
-        <button type="button" class="theme-toggle-btn me-1" id="themeToggleBtnMobile" title="Basculer entre thème sombre et clair" aria-label="Basculer le thème">
+        <button type="button" class="theme-toggle-btn me-1" id="themeToggleBtnMobile" onclick="toggleTheme()" title="Basculer entre thème sombre et clair" aria-label="Basculer le thème">
           <i class="bi bi-sun-fill"></i>
         </button>
         <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer le menu de navigation">
@@ -83,14 +155,20 @@
         </ul>
 
         <!-- Boutons d'action dans la navbar -->
-        <div class="d-flex align-items-center gap-3 ms-lg-4 mt-3 mt-lg-0">
+        <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 gap-lg-3 ms-lg-4 mt-3 mt-lg-0">
+          <!-- Bouton Thème Mobile avec label (visible dans le menu déroulant mobile) -->
+          <button type="button" class="btn-theme-mobile-menu d-lg-none" onclick="toggleTheme()" aria-label="Basculer entre thème sombre et clair">
+            <i class="bi bi-sun-fill me-2"></i>
+            <span class="theme-toggle-label">Mode Clair</span>
+          </button>
+
           <!-- Bouton Thème Clair/Sombre (Desktop) -->
-          <button type="button" class="theme-toggle-btn d-none d-lg-flex" id="themeToggleBtn" title="Basculer entre thème sombre et clair" aria-label="Basculer le thème">
+          <button type="button" class="theme-toggle-btn d-none d-lg-flex" id="themeToggleBtn" onclick="toggleTheme()" title="Basculer entre thème sombre et clair" aria-label="Basculer le thème">
             <i class="bi bi-sun-fill"></i>
           </button>
 
           <!-- Bouton Télécharger le CV -->
-          <a href="#cvModal" class="btn-modern-primary btn-sm btn-download-cv" data-bs-toggle="modal">
+          <a href="#cvModal" class="btn-modern-primary btn-sm btn-download-cv text-center" data-bs-toggle="modal">
             <i class="bi bi-file-earmark-person-fill"></i>
             <span>Mon CV</span>
           </a>
@@ -1747,7 +1825,7 @@
   <!-- Bootstrap 5 Bundle JS (inclut Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Script Principal -->
-  <script src="js/script.js"></script>
+  <!-- Script Principal (avec cache-busting) -->
+  <script src="js/script.js?v=2.2"></script>
 </body>
 </html>

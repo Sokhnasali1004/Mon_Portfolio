@@ -359,9 +359,45 @@ code, pre {
   cursor: pointer;
   transition: all var(--transition-fast);
   font-size: 1.1rem;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
-.theme-toggle-btn:hover {
+.theme-toggle-btn:hover,
+.theme-toggle-btn:active {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.theme-toggle-btn i,
+.btn-theme-mobile-menu i {
+  pointer-events: none;
+}
+
+/* Bouton Thème textuel dans le menu déroulant mobile */
+.btn-theme-mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-color);
+  background: var(--bg-glass);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  width: 100%;
+}
+
+.btn-theme-mobile-menu:hover,
+.btn-theme-mobile-menu:active {
   background: rgba(99, 102, 241, 0.15);
   border-color: var(--accent-primary);
   color: var(--accent-primary);
