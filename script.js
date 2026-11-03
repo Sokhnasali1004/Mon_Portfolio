@@ -1,17 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
   // --------------------------------------------------------------------------
-  // 1. GESTION DU THÈME (SOMBRE / CLAIR)
+  // 1. GESTION DU THÈME (SOMBRE / CLAIR) - DESKTOP & MOBILE
   // --------------------------------------------------------------------------
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
   const currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
 
   // Appliquer le thème initial
   document.documentElement.setAttribute('data-theme', currentTheme);
   updateThemeIcon(currentTheme);
 
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
+  // Écouter les clics sur tous les boutons de thème (desktop et mobile)
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
       const activeTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
       
@@ -19,22 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('portfolio-theme', newTheme);
       updateThemeIcon(newTheme);
     });
-  }
+  });
 
   function updateThemeIcon(theme) {
-    if (!themeToggleBtn) return;
-    const icon = themeToggleBtn.querySelector('i');
-    if (!icon) return;
-    
-    if (theme === 'light') {
-      icon.className = 'bi bi-moon-stars-fill';
-      themeToggleBtn.setAttribute('title', 'Activer le mode sombre');
-      themeToggleBtn.setAttribute('aria-label', 'Activer le mode sombre');
-    } else {
-      icon.className = 'bi bi-sun-fill';
-      themeToggleBtn.setAttribute('title', 'Activer le mode clair');
-      themeToggleBtn.setAttribute('aria-label', 'Activer le mode clair');
-    }
+    const isLight = theme === 'light';
+    const iconClass = isLight ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+    const titleText = isLight ? 'Activer le mode sombre' : 'Activer le mode clair';
+
+    themeToggleBtns.forEach(btn => {
+      const icon = btn.querySelector('i');
+      if (icon) {
+        icon.className = iconClass;
+      }
+      btn.setAttribute('title', titleText);
+      btn.setAttribute('aria-label', titleText);
+    });
   }
 
   // --------------------------------------------------------------------------
